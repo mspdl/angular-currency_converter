@@ -1,3 +1,6 @@
 export class Currency {
-  constructor(public initals?: string, public description?: string) {}
+  constructor(
+    public initals?: string,
+    public description?: string
+  ) {}
 }

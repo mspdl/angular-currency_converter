@@ -1,4 +1,4 @@
-export class Converter {
+export class Conversion {
   constructor(
     public fromCurrency?: string,
     public toCurrency?: string,

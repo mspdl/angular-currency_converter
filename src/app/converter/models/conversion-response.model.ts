@@ -1,4 +1,4 @@
-export class ConverterResponse {
+export class ConversionResponse {
   constructor(
     public base: string,
     public date: string,

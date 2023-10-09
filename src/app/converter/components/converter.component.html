@@ -1,26 +1,49 @@
 <br />
-<div class="alert alert-danger" role="alert">
+<div *ngIf="hasError" class="alert alert-danger" role="alert">
   Error getting date. Please try again.
 </div>
 <div class="panel panel-success">
   <div class="panel-heading">Please select a currency to convert</div>
   <div class="panel-body text-center">
-    <form class="form-inline">
+    <form #converterForm="ngForm" class="form-inline">
       <input
         type="text"
         name="value"
         class="form-control text-right"
+        [(ngModel)]="conversion.value"
         placeholder="0"
         required
       />
-      <select name="fromCurrency" class="form-control" required>
-        <option></option>
+      <select
+        name="fromCurrency"
+        class="form-control"
+        [(ngModel)]="conversion.fromCurrency"
+        required
+      >
+        <option *ngFor="let currency of currencies" [value]="currency.symbol">
+          {{ currency.symbol }} - {{ currency.description }}
+        </option>
       </select>
       <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-      <select name="toCurrency" class="form-control" required>
-        <option></option>
+      <select
+        name="toCurrency"
+        class="form-control"
+        [(ngModel)]="conversion.toCurrency"
+        required
+      >
+        <option *ngFor="let currency of currencies" [value]="currency.symbol">
+          {{ currency.symbol }} - {{ currency.description }}
+        </option>
       </select>
-      <input type="submit" value="Convert" class="btn btn-success" />
+      <input
+        type="submit"
+        value="Convert"
+        class="btn btn-success"
+        data-toggle="modal"
+        data-target="#exchangeRateModal"
+        (click)="convert()"
+        [disabled]="!converterForm.form.valid"
+      />
     </form>
   </div>
 </div>

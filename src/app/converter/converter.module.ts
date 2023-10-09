@@ -5,9 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { ConverterComponent } from './components/converter.component';
 import { ConverterService } from './services/converter.service';
 import { CurrencyService } from './services/currency.service';
+import { NumberDirective } from './directives/number.directive';
 
 @NgModule({
-  declarations: [ConverterComponent],
+  declarations: [ConverterComponent, NumberDirective],
   imports: [CommonModule, HttpClientModule, FormsModule],
   exports: [ConverterComponent],
   providers: [CurrencyService, ConverterService],

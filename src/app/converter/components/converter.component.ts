@@ -15,7 +15,7 @@ export class ConverterComponent implements OnInit {
   currencies: Currency[];
   conversion: Conversion;
   hasError: boolean;
-  conversionResponse: ConversionResponse;
+  conversionResponse: any;
 
   @ViewChild('converterForm', { static: true })
   converterForm: NgForm;
@@ -37,7 +37,15 @@ export class ConverterComponent implements OnInit {
 
   convert(): void {
     if (this.converterForm.form.valid) {
-      alert('Converting: ' + JSON.stringify(this.conversion));
+      this.converterService.convert(this.conversion).subscribe(
+        (response) => {
+          this.conversionResponse =
+            response[
+              `${this.conversion.fromCurrency}${this.conversion.toCurrency}`
+            ];
+        },
+        (error) => (this.hasError = true)
+      );
     }
   }
 }

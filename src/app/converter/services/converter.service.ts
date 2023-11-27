@@ -6,15 +6,14 @@ import { Conversion } from '../models/conversion.model';
 
 @Injectable()
 export class ConverterService {
-  ACCESS_KEY = 'b53faaca3ad649e8ad32f18d75c8c404';
-  BASE_URL = `http://data.fixer.io/api/latest`;
+  BASE_URL = `http://economia.awesomeapi.com.br/json/last/`;
 
   constructor(private http: HttpClient) {}
 
   convert(conversion: Conversion): Observable<ConversionResponse> {
-    let params = `base=${conversion.fromCurrency}&symbols=${conversion.toCurrency}`;
-
-    return this.http.get(this.BASE_URL + params).pipe(
+    let newUrl = `${this.BASE_URL}${conversion.fromCurrency}-${conversion.toCurrency}`;
+    console.log(newUrl);
+    return this.http.get(newUrl).pipe(
       map((response) => {
         return response as ConversionResponse;
       })

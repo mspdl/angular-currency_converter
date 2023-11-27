@@ -1,7 +1,8 @@
 export class ConversionResponse {
   constructor(
-    public base: string,
-    public date: string,
-    public rates: any
+    public bid: any,
+    public ask: any,
+    public rates: any,
+    public date: any,
   ) {}
 }

@@ -1,6 +1,6 @@
 <br />
 <div *ngIf="hasError" class="alert alert-danger" role="alert">
-  Error getting date. Please try again.
+  Error getting data. Please try again.
 </div>
 <div class="panel panel-success">
   <div class="panel-heading">Please select a currency to convert</div>
@@ -46,5 +46,14 @@
         [disabled]="!converterForm.form.valid"
       />
     </form>
+    <div *ngIf="conversionResponse">
+      <h1>
+        {{
+          ((+conversionResponse.high + +conversionResponse.low) / 2) *
+            conversion.value
+            | currency : conversion.toCurrency : true
+        }}
+      </h1>
+    </div>
   </div>
 </div>

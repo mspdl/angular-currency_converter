@@ -4,5 +4,6 @@ export class ConversionResponse {
     public ask: any,
     public rates: any,
     public date: any,
+    public create_date: any
   ) {}
 }

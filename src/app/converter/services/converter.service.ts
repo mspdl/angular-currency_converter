@@ -12,7 +12,6 @@ export class ConverterService {
 
   convert(conversion: Conversion): Observable<ConversionResponse> {
     let newUrl = `${this.BASE_URL}${conversion.fromCurrency}-${conversion.toCurrency}`;
-    console.log(newUrl);
     return this.http.get(newUrl).pipe(
       map((response) => {
         return response as ConversionResponse;

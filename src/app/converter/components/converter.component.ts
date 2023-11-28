@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ConversionResponse } from '../models/conversion-response.model';
 import { Conversion } from '../models/conversion.model';
 import { Currency } from '../models/currency.model';
 import { ConverterService } from '../services/converter.service';
@@ -39,6 +38,7 @@ export class ConverterComponent implements OnInit {
     if (this.converterForm.form.valid) {
       this.converterService.convert(this.conversion).subscribe(
         (response) => {
+          this.hasError = false;
           this.conversionResponse =
             response[
               `${this.conversion.fromCurrency}${this.conversion.toCurrency}`

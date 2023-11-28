@@ -46,14 +46,11 @@
         [disabled]="!converterForm.form.valid"
       />
     </form>
-    <div *ngIf="conversionResponse">
-      <h1>
-        {{
-          ((+conversionResponse.high + +conversionResponse.low) / 2) *
-            conversion.value
-            | currency : conversion.toCurrency : true
-        }}
-      </h1>
-    </div>
   </div>
+  <app-exchange-rate
+    [id]="'exchangeRateModal'"
+    [conversionResponse]="conversionResponse"
+    [conversion]="conversion"
+    (onConfirm)="init()"
+  ></app-exchange-rate>
 </div>

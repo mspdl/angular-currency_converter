@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ExchangeRateComponent } from './exchange-rate.component';
 
 describe('ExchangeRateComponent', () => {
@@ -8,9 +7,8 @@ describe('ExchangeRateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExchangeRateComponent ]
-    })
-    .compileComponents();
+      declarations: [ExchangeRateComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ExchangeRateComponent);
     component = fixture.componentInstance;

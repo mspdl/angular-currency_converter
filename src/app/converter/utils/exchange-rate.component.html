@@ -24,12 +24,12 @@
       <div class="modal-body text-center">
         <div>
           <h2>
-            {{ conversion.value | currency : conversion.fromCurrency }} =
-            {{ conversionTotalValue | currency : conversion.toCurrency }}
+            {{ conversion?.value | currency : conversion?.fromCurrency }} =
+            {{ conversionTotalValue | currency : conversion?.toCurrency }}
           </h2>
           <p>
-            {{ 1 | currency : conversion.fromCurrency }} =
-            {{ conversionValue | currency : conversion.toCurrency }}
+            {{ 1 | currency : conversion?.fromCurrency }} =
+            {{ conversionValue | currency : conversion?.toCurrency }}
           </p>
         </div>
       </div>

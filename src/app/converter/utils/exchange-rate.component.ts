@@ -24,7 +24,7 @@ export class ExchangeRateComponent {
   get conversionTotalValue(): number {
     return (
       ((+this.conversionResponse?.ask + +this.conversionResponse?.bid) / 2) *
-      this.conversion.value
+      this.conversion?.value
     );
   }
 }

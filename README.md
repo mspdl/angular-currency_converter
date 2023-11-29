@@ -1,27 +1,76 @@
-# CurrencyConverter
+# Currency Converter using Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
+![GitHub repo size](https://img.shields.io/github/repo-size/mspdl/angular-currency_converter?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/mspdl/angular-currency_converter?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/mspdl/angular-currency_converter?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/mspdl/angular-currency_converter?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/mspdl/angular-currency_converter?style=for-the-badge)
 
-## Development server
+<img src="image.png" alt="Image Sample">
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+> Users can convert currencies values between dollar, euro and real
 
-## Code scaffolding
+This project uses AwesomeAPI from this link:
+https://docs.awesomeapi.com.br/api-de-moedas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Adjusts and improvements
 
-## Build
+The project is working and it is almost finished:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [x] Currency convertion working
+- [x] Finish README and documentation
+- [x] Unit Tests without erros
+- [ ] 90%+ Code Coverage
+- [ ] Add this project to my portfolio
 
-## Running unit tests
+Improvements
+- [ ] Change button: allow user to change between selected currencies
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Bugs
+- [ ] Disable Convert button when select same currency
 
-## Running end-to-end tests
+## 💻 Requirements
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Before we start, please check it out:
 
-## Further help
+- Node version installed (I used version `v18.14.1`)
+- This project can run on any Operating System (Windows/Linux/Mac).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 🚀 Installing Currency Converter
+
+To install Currency Converter follow these steps:
+
+```
+npm install
+```
+
+Then, after finish:
+
+```
+npm start
+```
+
+## ☕ Using Currency Converter
+
+To use Currency Converter just access the following link after running the project:
+http://localhost:4200/
+
+## 📫 Contributing to Currency Converter
+
+To contribute to Currency Converter, follow these steps:
+
+1. Fork this repository.
+2. Create a branch: `git checkout -b <name_branch>`.
+3. Make your changes and confirm it: `git commit -m '<message_commit>'`
+4. Send it to the main branch: `git push origin <main> / <local>`
+5. Create your Pull Request.
+
+As an alternative, look at GitHub documentation [how to create a Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+
+## 🤝 Collabs
+
+This project was created based on an example of the course [Formação Angular 13 - O início criando 7 projetos](https://www.udemy.com/course/formacao-angular-inicio-criando-7-projetos/) mastered by [Marcio Cesale de Souza](https://www.udemy.com/user/marcio-casale-de-souza/) 
+
+## 📝 License
+
+This project is under the MIT License. See the file [LICENSE](LICENSE) for more details.
